@@ -1,0 +1,94 @@
+// out: style.css
+
+@import url('https://fonts.googleapis.com/css?family=Raleway')
+
+// colors
+main = #4A6491
+dark = #1A1F2B
+font = #D0E4F2
+focus = #85A5CC
+accent = #30395C
+
+*,*:before,*:after
+  margin 0
+  padding 0
+  box-sizing border-box
+
+a, a:hover, a:visited
+  color inherit
+  text-decoration none
+
+input, button
+  border none
+  outline none
+  color font
+  transition all .11s ease-in-out
+
+search
+  width 100%
+
+form
+  width 100%
+  display flex
+  input[type='text']
+    height 2.6em
+    background accent
+    text-indent .8em
+    border-radius .9em 0 0 .9em
+    border 1px solid main
+    &:focus
+      border 1px solid focus
+    &.full
+      width 100%
+      border-radius 2em
+      height 3.2em
+  input[type='submit']
+    background accent
+    width 2.6em
+    height 2.6em
+    border-radius 50%
+    border 1px solid main
+    transform translateX(-50%)
+    &:hover
+      border-color focus
+      background focus
+      color dark
+
+body
+  width 100%
+  min-height 100vh
+  background main
+  font-family 'Raleway', sans-serif
+  line-height 1.5
+  color font
+
+.container
+  width 90%
+  margin 0 auto
+  display flex
+
+nav
+  font-size 1.2em
+  width 100%
+  min-height 2em
+  background dark
+  box-shadow 0px 2px 4px 0px rgba(0,0,0,0.75)
+  border-bottom 1px solid accent
+  margin-bottom 1.6em
+  .nav-header
+    display flex
+    h1
+      padding 0 .6em
+    .nav-links
+      display flex
+      align-items center
+      list-style none
+      li
+        a
+          display block
+          padding 0 .4em
+          transition all .11s ease-in-out
+        a:hover
+          color focus
+        a.active
+          color focus

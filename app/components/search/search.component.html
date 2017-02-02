@@ -1,0 +1,18 @@
+<form>
+  <input
+    class="full"
+    type="text"
+    name="query"
+    placeholder="Search.."
+    [(ngModel)]="query"
+    (keyup)="searchMusic()"
+    />
+</form>
+
+<div *ngIf="result">
+  <div *ngFor="let res of result">
+    <div class="panel">
+      <h4><a href="#">{{ res.name }}</a></h4>
+    </div>
+  </div>
+</div>
